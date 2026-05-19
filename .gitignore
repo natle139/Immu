@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# AI / Immu-specific
+chroma_db/
+data/raw/
+*.pdf
