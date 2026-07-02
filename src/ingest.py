@@ -13,6 +13,13 @@ CHROMA_DB_DIR = "chroma_db"
 # ponytail: filename-based tag instead of content classification, upgrade if filenames stop being a reliable signal
 LEGISLATION_PREFIXES = ("F2026C00324", "C2026C00090")
 
+# every subclass-specific fact sheet filename contains its code in parens, e.g. "(BVA)", "(BVE)"
+VISA_SUBCLASS_PATTERN = re.compile(r"\bBV([A-E])\b")
+
+def infer_visa_subclass(filename: str) -> str:
+    match = VISA_SUBCLASS_PATTERN.search(filename)
+    return f"BV{match.group(1)}" if match else "none"
+
 # print-to-PDF header/footer cruft (timestamps, "Page N of M", raw URLs) that
 # otherwise eats a big chunk of short fact-sheet chunks and dilutes their embedding
 BOILERPLATE_LINE_PATTERNS = [
@@ -35,6 +42,7 @@ def ingest_pdfs(directory: str) -> list[Document]:
         if not file.endswith(".pdf"):
             continue
         doc_type = "legislation" if file.startswith(LEGISLATION_PREFIXES) else "fact_sheet"
+        visa_subclass = infer_visa_subclass(file)
         pdf_path = os.path.join(directory, file)
         pdf = fitz.open(pdf_path)
         for page_num, page in enumerate(pdf):
@@ -42,7 +50,7 @@ def ingest_pdfs(directory: str) -> list[Document]:
             if text.strip():
                 documents.append(Document(
                     page_content=text,
-                    metadata={"source": file, "page": page_num + 1, "doc_type": doc_type},
+                    metadata={"source": file, "page": page_num + 1, "doc_type": doc_type, "visa_subclass": visa_subclass},
                 ))
     return documents
 
@@ -60,6 +68,9 @@ def chunk_documents(documents: list[Document]) -> list[Document]:
     )
     return text_splitter.split_documents(documents)
 
+def flag_short_chunks(chunks: list[Document], min_chars: int = 60) -> list[Document]:
+    return [c for c in chunks if len(c.page_content.strip()) < min_chars]
+
 def build_vectorstore(chunks: list[Document]) -> Chroma:
    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
    return Chroma.from_documents(chunks, embeddings, persist_directory=CHROMA_DB_DIR)
@@ -75,6 +86,14 @@ if __name__ == "__main__":
     print("Chunking documents...")
     chunks = chunk_documents(documents)
     print(f"Chunked {len(chunks)} chunks")
+    short_chunks = flag_short_chunks(chunks)
+    if short_chunks:
+        print(f"\n{len(short_chunks)} chunks under 60 chars (review for merge/drop):")
+        for c in short_chunks[:20]:
+            print(f"  {c.metadata['source']} p{c.metadata['page']}: {c.page_content!r}")
+        if len(short_chunks) > 20:
+            print(f"  ... and {len(short_chunks) - 20} more")
+        print()
     print("Building vector store...")
     vectorstore = build_vectorstore(chunks)
     print("Vectorstore built")

@@ -30,7 +30,7 @@ def generate_answer(query: str, documents: list[Document], sources: list[str]) -
     context = "\n\n---\n\n".join([doc.page_content for doc in documents])
     prompt = SYSTEM_PROMPT.format(context=context)
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="llama-3.1-8b-instant",
         max_tokens=1024,
         messages=[
             {"role": "system", "content": prompt},
