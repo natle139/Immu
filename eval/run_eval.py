@@ -26,8 +26,8 @@ def check_retrieval(item: dict, sources: list[str]) -> bool:
 
 
 def check_answer(item: dict, answer: str) -> bool:
-    answer_lower = answer.lower()
-    return any(kw.lower() in answer_lower for kw in item["expected_keywords"])
+    answer_lower = answer.lower().replace("’", "'")
+    return any(kw.lower().replace("’", "'") in answer_lower for kw in item["expected_keywords"])
 
 
 def main():
