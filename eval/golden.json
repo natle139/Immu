@@ -1,0 +1,47 @@
+[
+  {
+    "question": "How much does a Bridging Visa A cost?",
+    "expected_source": "Subclass 010 Bridging visa A (BVA).pdf",
+    "expected_keywords": ["free"]
+  },
+  {
+    "question": "Can I leave Australia and come back while I'm on a Bridging Visa A?",
+    "expected_source": "Subclass 010 Bridging visa A (BVA).pdf",
+    "expected_keywords": ["does not support return travel", "not support return travel"]
+  },
+  {
+    "question": "How much does a Bridging Visa B cost?",
+    "expected_source": "Subclass 020 Bridging visa B (BVB).pdf",
+    "expected_keywords": ["190"]
+  },
+  {
+    "question": "What is a Bridging Visa E for?",
+    "expected_source": "Bridging visa E (BVE) - Subclass 050 and 051.pdf",
+    "expected_keywords": ["leave", "finalise", "immigration decision"]
+  },
+  {
+    "question": "Is there an application fee for a Bridging Visa E?",
+    "expected_source": "Bridging visa E (BVE) - Subclass 050 and 051.pdf",
+    "expected_keywords": ["no fee", "free"]
+  },
+  {
+    "question": "What does condition 8101 mean on my bridging visa?",
+    "expected_source": "24.06.28 Work rights.pdf",
+    "expected_keywords": ["no work", "must not work"]
+  },
+  {
+    "question": "I have a Bridging Visa C with a no work condition. What do I need to show to get work rights?",
+    "expected_source": "24.06.28 Work rights.pdf",
+    "expected_keywords": ["financial hardship", "compelling need"]
+  },
+  {
+    "question": "Can I use a bridging visa while I wait for my citizenship application to be decided?",
+    "expected_source": ["Subclass 010 Bridging visa A (BVA).pdf", "Subclass 020 Bridging visa B (BVB).pdf"],
+    "expected_keywords": ["can't use a bridging visa", "cannot use a bridging visa", "can not use a bridging visa"]
+  },
+  {
+    "question": "What's the weather like in Sydney today?",
+    "expected_source": null,
+    "expected_keywords": ["don't have enough information", "do not have enough information", "couldn't find reliable information"]
+  }
+]

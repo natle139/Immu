@@ -44,3 +44,14 @@ curl -X POST http://localhost:8000/ask \
 
 - **Generation:** `llama-3.3-70b-versatile` via Groq
 - **Embeddings:** `sentence-transformers/all-MiniLM-L6-v2` (local)
+
+## Eval
+
+`eval/golden.json` has labeled questions with expected source docs and answer keywords.
+Run against the live retriever + Groq:
+
+```bash
+python -m eval.run_eval
+```
+
+Prints a pass/fail per question and a retrieval/answer score; exits non-zero below 70%.
