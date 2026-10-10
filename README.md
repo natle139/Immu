@@ -3,8 +3,10 @@ title: Immu
 emoji: 🛂
 colorFrom: blue
 colorTo: gray
-sdk: docker
-app_port: 7860
+sdk: gradio
+sdk_version: 6.30.0
+python_version: '3.12'
+app_file: app.py
 short_description: Australian bridging visa Q&A from official documents
 ---
 
