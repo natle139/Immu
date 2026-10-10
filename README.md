@@ -1,3 +1,13 @@
+---
+title: Immu
+emoji: 🛂
+colorFrom: blue
+colorTo: gray
+sdk: docker
+app_port: 7860
+short_description: Australian bridging visa Q&A from official documents
+---
+
 # Immu
 
 Bridging visa & visa pathway navigator | RAG system
@@ -42,7 +52,7 @@ curl -X POST http://localhost:8000/ask \
 
 ## Models
 
-- **Generation:** `llama-3.3-70b-versatile` via Groq
+- **Generation:** `openai/gpt-oss-20b` via Groq
 - **Embeddings:** `sentence-transformers/all-MiniLM-L6-v2` (local)
 
 ## Eval

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Immu — Bridging Visa Navigator</title>
+<meta name="description" content="Plain-English answers about Australian bridging visas, drawn from official Department of Home Affairs documents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* tokens from the Claude Design "Modernist" system, accent set to ink as in the mockup */
+:root {
+  --bg: #f3f2f2; --text: #201e1d; --paper: #fff;
+  --n700: #605d5d; --n800: #444141; --n900: #2d2b2b;
+  --divider: color-mix(in srgb, #201e1d 40%, transparent);
+  --font: "Archivo", system-ui, sans-serif;
+  --gutter: 48px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 var(--font); }
+h1, h2 { font-weight: 800; margin: 0; text-wrap: pretty; }
+p { margin: 0; }
+a { color: var(--text); text-underline-offset: 3px; }
+a:hover { color: var(--n700); }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.page { max-width: 1040px; margin: 0 auto; }
+.kicker { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.muted { color: var(--n700); }
+
+.btn { display: inline-flex; align-items: center; justify-content: space-between; gap: 12px;
+  font: 800 15px/1.2 var(--font); color: var(--text); background: transparent;
+  border: 1px solid var(--divider); padding: 14px 18px; cursor: pointer; text-decoration: none; }
+.btn:hover { background: color-mix(in srgb, var(--text) 7%, transparent); color: var(--text); }
+.btn-primary { background: var(--text); color: var(--bg); border-color: var(--text); min-width: 200px; }
+.btn-primary:hover { background: var(--n800); color: var(--bg); }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.input { width: 100%; font: inherit; font-size: 18px; color: var(--text); background: var(--paper);
+  border: 2px solid var(--text); padding: 16px 18px; border-radius: 0; }
+textarea.input { min-height: 150px; resize: vertical; }
+
+/* masthead (1a) */
+.masthead { padding: 20px var(--gutter) 0; }
+.dateline { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; font-size: 11px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--n700); padding-bottom: 10px; border-bottom: 1px solid var(--text); }
+.title-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 24px 0 18px; }
+.wordmark { display: flex; align-items: flex-end; gap: 18px; color: var(--text); text-decoration: none; }
+.wordmark:hover { color: var(--text); }
+.wordmark span { font-weight: 800; font-size: clamp(64px, 14vw, 112px); line-height: .82; letter-spacing: -.05em; }
+.wordmark svg { width: clamp(52px, 10vw, 84px); height: auto; }
+.tagline { max-width: 240px; font-size: 12px; line-height: 1.45; color: var(--n800); }
+.rule2 { height: 2px; background: var(--text); }
+.rule1 { height: 1px; background: var(--text); margin-top: 3px; }
+
+/* compact header (1c, 1d) */
+.bar { display: flex; align-items: center; gap: 16px; padding: 16px var(--gutter); border-bottom: 2px solid var(--text); }
+.bar .wordmark { align-items: center; gap: 10px; margin-right: auto; }
+.bar .wordmark span { font-size: 24px; letter-spacing: -.03em; line-height: 1; }
+.bar .wordmark svg { width: 30px; }
+
+/* ask (1a) */
+.ask { padding: 56px var(--gutter) 40px; display: grid; grid-template-columns: 1fr 3fr; gap: 32px; }
+.ask > .kicker { font-weight: 600; padding-top: 10px; border-top: 2px solid var(--text); align-self: start; }
+.ask form { display: flex; flex-direction: column; gap: 18px; }
+.ask h2 { font-size: clamp(28px, 5vw, 40px); line-height: 1.05; letter-spacing: -.03em; }
+.row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.often { margin: 0 var(--gutter); border-top: 2px solid var(--text); display: grid; grid-template-columns: repeat(3, 1fr); }
+.often button { all: unset; cursor: pointer; padding: 16px 20px 18px; display: flex; flex-direction: column; gap: 6px; }
+.often button:first-child { padding-left: 0; }
+.often button + button { border-left: 1px solid var(--divider); }
+.often button:focus-visible { outline: 2px solid var(--text); }
+.often b { font-size: 16px; }
+.often button:hover b { text-decoration: underline; text-underline-offset: 3px; }
+.notice { margin: 40px var(--gutter) 0; border: 2px solid var(--text); padding: 20px 24px; background: var(--paper);
+  display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; }
+.notice-tag { font-weight: 800; font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+  padding: 6px 10px; background: var(--text); color: var(--bg); }
+.notice strong { display: block; font-size: 18px; margin-bottom: 6px; }
+.notice p { font-size: 14px; color: var(--n900); text-wrap: pretty; }
+footer { margin: 48px var(--gutter) 0; padding: 14px 0 22px; border-top: 1px solid var(--text);
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--n700); }
+
+/* answer (1c) */
+.q-head { padding: 36px var(--gutter) 0; display: flex; flex-direction: column; gap: 12px; }
+.q-head h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1; letter-spacing: -.04em; }
+.q-meta { font-size: 13px; color: var(--n700); padding-bottom: 16px; border-bottom: 1px solid var(--text); }
+.inline-notice { margin: 20px var(--gutter) 0; padding: 12px 16px; border: 2px solid var(--text);
+  display: flex; gap: 14px; align-items: baseline; font-size: 13px; }
+.inline-notice b { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.article { padding: 28px var(--gutter) 40px; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+.answer { display: flex; flex-direction: column; gap: 14px; font-size: 16px; line-height: 1.62; }
+.answer > p:first-child { font-size: 20px; line-height: 1.45; font-weight: 600; }
+.answer ul { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 6px; }
+.help { margin-top: 8px; padding-top: 14px; border-top: 2px solid var(--text); font-size: 14px; }
+.help b { display: block; margin-bottom: 6px; }
+.sources { border-top: 2px solid var(--text); align-self: start; }
+.sources .kicker { font-weight: 700; padding: 12px 0; display: block; }
+.source { padding: 12px 0; border-top: 1px solid var(--divider); display: flex; flex-direction: column; gap: 4px; }
+.source b { font-size: 13px; }
+.source span { font-size: 12px; color: var(--n800); }
+.follow { margin: 0 var(--gutter); padding: 20px 0 40px; border-top: 2px solid var(--text);
+  display: grid; grid-template-columns: 1fr auto; gap: 12px; }
+.follow .input { font-size: 16px; padding: 12px 14px; }
+.follow .btn-primary { min-width: 140px; }
+
+/* loading + error (1d) */
+.state { padding: 32px var(--gutter) 48px; max-width: 720px; display: flex; flex-direction: column; gap: 16px; }
+.state textarea.input { min-height: 110px; font-size: 16px; padding: 14px; }
+.err { border: 2px solid var(--text); }
+.err-tag { background: var(--text); color: var(--bg); padding: 8px 14px; font-size: 11px; font-weight: 800;
+  letter-spacing: .1em; text-transform: uppercase; }
+.err-body { padding: 14px; display: flex; flex-direction: column; gap: 12px; font-size: 15px; }
+.loading-line { height: 2px; background: var(--text); transform-origin: left; animation: load 1.4s ease-in-out infinite; }
+@keyframes load { 0% { transform: scaleX(0); } 50% { transform: scaleX(1); } 100% { transform: scaleX(0); transform-origin: right; } }
+@media (prefers-reduced-motion: reduce) { .loading-line { animation: none; } }
+
+[hidden] { display: none !important; }
+
+@media (max-width: 760px) {
+  :root { --gutter: 16px; }
+  .dateline span:nth-child(2), .tagline { display: none; }
+  .ask, .article { grid-template-columns: 1fr; gap: 20px; }
+  .ask { padding-top: 32px; }
+  .often { grid-template-columns: 1fr; }
+  .often button, .often button:first-child { padding: 14px 0; }
+  .often button + button { border-left: 0; border-top: 1px solid var(--divider); }
+  .notice { grid-template-columns: 1fr; gap: 12px; }
+  .notice-tag { justify-self: start; }
+  .inline-notice { flex-direction: column; gap: 4px; }
+  .follow { grid-template-columns: 1fr; }
+  .btn-primary { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<template id="logo">
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M47 9.5c-2.2-1.6-5.2-.6-5.8 2-.4 1.8.4 3 .8 4.6 1.2 4.4-1 9.6-5.6 13.6"/><path d="M47 9.5l5 2.2-5.2 1.2"/><circle cx="45" cy="11" r=".8" fill="currentColor"/><path d="M36.4 29.8C30 26.2 18 26 12.4 33.2c-4.2 5.4-1.6 12 5 14.4 6.6 2.4 15.4 1.4 20-3.6 3.4-3.6 2.8-10-1-14.2z"/><path d="M12.4 33.2L7 36.4M16 38.5c4 1.6 9 1.8 13 .4"/><path d="M24 47.8l-1.6 13.2h-4M22.4 61h3M31 47.6l2.4 13.4h3.4"/></svg>
+</template>
+
+<div class="page">
+
+<!-- home (mockup 1a) -->
+<main id="home">
+  <header class="masthead">
+    <div class="dateline"><span id="today"></span><span>Australian visa conditions, in plain English</span><span>Official sources only</span></div>
+    <div class="title-row">
+      <a class="wordmark" href="/" aria-label="Immu home"><i class="logo"></i><span>Immu</span></a>
+      <p class="tagline">An independent reading aid for Australian visa conditions. Not affiliated with the Department of Home Affairs.</p>
+    </div>
+    <div class="rule2"></div><div class="rule1"></div>
+  </header>
+
+  <section class="ask">
+    <div class="kicker">Ask a question</div>
+    <form id="ask-form">
+      <h2><label for="q">What would you like to know about your bridging visa?</label></h2>
+      <textarea id="q" class="input" required placeholder="e.g. Can I work while on Bridging Visa A?"></textarea>
+      <div class="row">
+        <button class="btn btn-primary" type="submit">Ask Immu <span aria-hidden="true">→</span></button>
+        <span class="muted" style="font-size:13px">Every answer lists the official documents it was drawn from.</span>
+      </div>
+    </form>
+  </section>
+
+  <div class="often">
+    <button type="button" data-q="Can I work while on Bridging Visa A?"><span class="kicker muted">Often asked · Work</span><b>Can I work while on Bridging Visa A?</b></button>
+    <button type="button" data-q="Can I leave Australia and come back while on a bridging visa?"><span class="kicker muted">Often asked · Travel</span><b>Can I leave Australia and come back?</b></button>
+    <button type="button" data-q="What happens if my visa application is refused?"><span class="kicker muted">Often asked · Refusal</span><b>What happens if my application is refused?</b></button>
+  </div>
+
+  <aside class="notice">
+    <div class="notice-tag">Notice</div>
+    <div>
+      <strong>Immu is not legal advice.</strong>
+      <p>Immu summarises public information from the Department of Home Affairs and the Migration Regulations. It can be incomplete, out of date or wrong about your circumstances. Before acting on anything — especially work, travel or deadlines — check with a <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/" target="_blank" rel="noopener">registered migration agent</a> or an Australian lawyer. Free help may be available through <a href="https://www.nationallegalaid.org/" target="_blank" rel="noopener">Legal Aid</a>.</p>
+    </div>
+  </aside>
+</main>
+
+<!-- answer (mockup 1c) -->
+<main id="result" hidden>
+  <header class="bar">
+    <a class="wordmark" href="/" aria-label="Immu home"><i class="logo"></i><span>Immu</span></a>
+    <button class="btn new-q" type="button" style="padding:8px 14px;font-size:14px">New question</button>
+  </header>
+  <div class="q-head">
+    <span class="kicker muted" id="r-kicker">Your question</span>
+    <h1 id="r-question"></h1>
+    <div class="q-meta" id="r-meta"></div>
+  </div>
+  <div class="inline-notice"><b>Not legal advice</b><span>This is a summary of public guidance. Your circumstances may change the answer — confirm with a registered migration agent before relying on it.</span></div>
+  <div class="article">
+    <div>
+      <div class="answer" id="r-answer" aria-live="polite"></div>
+      <div class="help"><b>When to get professional help</b>If your visa has already expired, you were refused, or you’re unsure which visa you hold, talk to a registered migration agent or lawyer.</div>
+    </div>
+    <div class="sources" id="r-sources-wrap"><span class="kicker">Sources</span><div id="r-sources"></div></div>
+  </div>
+  <form class="follow" id="follow-form">
+    <label for="follow-q" class="kicker" hidden>Ask another question</label>
+    <input id="follow-q" class="input" required placeholder="Ask another question — e.g. Can I study on this visa?">
+    <button class="btn btn-primary" type="submit">Ask <span aria-hidden="true">→</span></button>
+  </form>
+</main>
+
+<!-- loading + error (mockup 1d) -->
+<main id="pending" hidden>
+  <header class="bar">
+    <a class="wordmark" href="/" aria-label="Immu home"><i class="logo"></i><span>Immu</span></a>
+  </header>
+  <div class="state">
+    <textarea id="p-question" class="input" aria-label="Your question"></textarea>
+    <div id="loading" role="status">
+      <div class="loading-line"></div>
+      <p class="muted" style="margin-top:12px">Searching official documents…</p>
+    </div>
+    <div class="err" id="error" hidden role="alert">
+      <div class="err-tag">No answer was given</div>
+      <div class="err-body">
+        <span>Immu couldn’t reach its answer service (it may be busy or over its daily limit), so it hasn’t answered rather than guess. Your question is saved above.</span>
+        <div class="row" style="gap:12px">
+          <button class="btn btn-primary" id="retry" type="button" style="min-width:140px">Try again <span aria-hidden="true">↻</span></button>
+          <a class="btn" href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing" target="_blank" rel="noopener">Go to Home Affairs ↗</a>
+        </div>
+      </div>
+    </div>
+    <span class="muted" style="font-size:12px">Immu is not legal advice. For urgent deadlines, contact a registered migration agent.</span>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Immu · Answers drawn from Department of Home Affairs fact sheets, the Migration Act 1958 and Migration Regulations 1994.</span>
+  <a href="https://github.com/natle139/Immu" target="_blank" rel="noopener">Source on GitHub</a>
+</footer>
+
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+document.querySelectorAll(".logo").forEach(el => el.replaceWith($("logo").content.cloneNode(true)));
+$("today").textContent = "No. 010 · " + new Date().toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+
+const SUBCLASS = { A: "Bridging visa A (subclass 010)", B: "Bridging visa B (subclass 020)", C: "Bridging visa C (subclass 030)", E: "Bridging visa E (subclass 050/051)" };
+// mirrors detect_visa_subclass() in src/retriever.py
+const subclassOf = q => { const m = q.match(/\bbridging\s+visa\s+([a-e])\b|\bbv([a-e])\b/i); return m && SUBCLASS[(m[1] || m[2]).toUpperCase()]; };
+
+// "F2026C00324VOL03.pdf p.12" -> friendly title; grouped so one document is one source
+const LEGISLATION = { F2026C00324: "Migration Regulations 1994", C2026C00090: "Migration Act 1958" };
+function docTitle(file) {
+  const name = file.replace(/\.pdf$/i, "");
+  const leg = name.match(/^(F2026C00324|C2026C00090)VOL0?(\d+)$/);
+  if (leg) return [LEGISLATION[leg[1]] + ", Vol. " + leg[2], "Federal Register of Legislation"];
+  return [name.replace(/^\d{2}\.\d{2}\.\d{2}\s+/, ""), "Official fact sheet"];
+}
+function groupSources(sources) {
+  const byFile = new Map();
+  for (const s of sources) {
+    const [, file, page] = s.match(/^(.*?)(?: p\.(\d+))?$/);
+    if (!byFile.has(file)) byFile.set(file, []);
+    if (page) byFile.get(file).push(Number(page));
+  }
+  return [...byFile].map(([file, pages]) => ({ file, pages: pages.sort((a, b) => a - b) }));
+}
+
+// minimal markdown: paragraphs, "- " lists, **bold**, *italic*. Escapes first, so model output can't inject HTML.
+function renderMarkdown(text) {
+  const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const inline = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/(^|\W)\*(\S.*?)\*(?=\W|$)/g, "$1<em>$2</em>");
+  return text.trim().split(/\n\s*\n/).map(block => {
+    const lines = block.split("\n").map(l => l.trim()).filter(Boolean);
+    if (lines.every(l => /^[-*•]\s/.test(l))) return "<ul>" + lines.map(l => "<li>" + inline(l.replace(/^[-*•]\s+/, "")) + "</li>").join("") + "</ul>";
+    return "<p>" + lines.map(inline).join("<br>") + "</p>";
+  }).join("");
+}
+
+function show(view) { for (const v of ["home", "result", "pending"]) $(v).hidden = v !== view; window.scrollTo(0, 0); }
+
+let lastQuestion = "";
+async function ask(question) {
+  question = question.trim();
+  if (!question) return;
+  lastQuestion = question;
+  $("p-question").value = question;
+  $("loading").hidden = false; $("error").hidden = true;
+  show("pending");
+  try {
+    const res = await fetch("/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query: question }) });
+    if (!res.ok) throw new Error(res.status);
+    renderResult(question, await res.json());
+  } catch (e) {
+    $("loading").hidden = true; $("error").hidden = false;
+  }
+}
+
+function renderResult(question, data) {
+  const docs = groupSources(data.sources);
+  $("r-question").textContent = question;
+  const sub = subclassOf(question);
+  $("r-kicker").textContent = "Your question" + (sub ? " · " + sub : "");
+  $("r-meta").textContent = docs.length ? `Answered from ${docs.length} official source${docs.length > 1 ? "s" : ""}` : "No matching official source found";
+  $("r-answer").innerHTML = renderMarkdown(data.answer);
+  $("r-sources-wrap").hidden = !docs.length;
+  $("r-sources").replaceChildren(...docs.map((d, i) => {
+    const [title, kind] = docTitle(d.file);
+    const el = document.createElement("div");
+    el.className = "source";
+    el.innerHTML = "<b></b><span></span>";
+    el.querySelector("b").textContent = `[${i + 1}] ${title}`;
+    el.querySelector("span").textContent = kind + (d.pages.length ? ` · p. ${d.pages.join(", ")}` : "");
+    return el;
+  }));
+  $("follow-q").value = "";
+  show("result");
+}
+
+$("ask-form").addEventListener("submit", e => { e.preventDefault(); ask($("q").value); });
+$("follow-form").addEventListener("submit", e => { e.preventDefault(); ask($("follow-q").value); });
+$("q").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("ask-form").requestSubmit(); } });
+document.querySelectorAll("[data-q]").forEach(b => b.addEventListener("click", () => { $("q").value = b.dataset.q; ask(b.dataset.q); }));
+document.querySelectorAll(".new-q").forEach(b => b.addEventListener("click", () => { $("q").value = ""; show("home"); $("q").focus(); }));
+$("retry").addEventListener("click", () => ask($("p-question").value || lastQuestion));
+// shareable links: /?q=Can+I+work+on+a+BVA
+const shared = new URLSearchParams(location.search).get("q");
+if (shared) { $("q").value = shared; ask(shared); }
+</script>
+</body>
+</html>

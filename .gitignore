@@ -219,8 +219,6 @@ __marimo__/
 
 # AI / Immu-specific
 chroma_db/
-data/raw/
-*.pdf
 
 # macOS
 .DS_Store
