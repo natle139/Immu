@@ -2,116 +2,176 @@
   {
     "question": "How much does a Bridging Visa A cost?",
     "expected_source": "Subclass 010 Bridging visa A (BVA).pdf",
-    "expected_keywords": ["free"]
+    "expected_patterns": ["free"],
+    "must_not_contain": ["\\bbv[bce]\\b", "bridging visa [bce]\\b", "\\b(020|030|050|051)\\b"]
   },
   {
     "question": "Can I leave Australia and come back while I'm on a Bridging Visa A?",
     "expected_source": "Subclass 010 Bridging visa A (BVA).pdf",
-    "expected_keywords": ["does not support return travel", "not support return travel"]
+    "expected_patterns": [
+      "(does not|doesn't) support return travel",
+      "(cannot|can't|can not|not be able to|unable to|not allowed to|(does not|doesn't) (let|allow) you( to)?)[^.\\n]{0,40}(return|come back|re-?enter)",
+      "(visa|bva)[^.\\n]{0,40}(ends|ceases|stops)[^.\\n]{0,40}(leave|depart)",
+      "(leave|depart)[^.\\n]{0,60}(visa|bva)[^.\\n]{0,30}(ends|ceases|stops)"
+    ]
   },
   {
     "question": "How much does a Bridging Visa B cost?",
     "expected_source": "Subclass 020 Bridging visa B (BVB).pdf",
-    "expected_keywords": ["190"]
+    "expected_patterns": ["190"],
+    "must_not_contain": ["\\bbv[ace]\\b", "bridging visa [ace]\\b", "\\b(010|030|050|051)\\b"]
   },
   {
     "question": "What is a Bridging Visa E for?",
     "expected_source": "Bridging visa E (BVE) - Subclass 050 and 051.pdf",
-    "expected_keywords": ["leave", "finalise", "immigration decision"]
+    "expected_patterns": ["leave", "finalise", "immigration decision"]
   },
   {
     "question": "Is there an application fee for a Bridging Visa E?",
     "expected_source": "Bridging visa E (BVE) - Subclass 050 and 051.pdf",
-    "expected_keywords": ["no fee", "free"]
+    "expected_patterns": ["no fee", "free"],
+    "must_not_contain": ["\\bbv[abc]\\b", "bridging visa [abc]\\b", "\\b(010|020|030)\\b"]
   },
   {
     "question": "What does condition 8101 mean on my bridging visa?",
     "expected_source": "24.06.28 Work rights.pdf",
-    "expected_keywords": ["no work", "must not work"]
+    "expected_patterns": ["no work", "must not work"]
   },
   {
     "question": "I have a Bridging Visa C with a no work condition. What do I need to show to get work rights?",
     "expected_source": "24.06.28 Work rights.pdf",
-    "expected_keywords": ["financial hardship", "compelling need"]
+    "expected_patterns": ["financial hardship", "compelling need"]
   },
   {
     "question": "Can I use a bridging visa while I wait for my citizenship application to be decided?",
     "expected_source": ["Subclass 010 Bridging visa A (BVA).pdf", "Subclass 020 Bridging visa B (BVB).pdf", "Subclass 030 Bridging visa C (BVC).pdf"],
-    "expected_keywords": ["can't use a bridging visa", "cannot use a bridging visa", "can not use a bridging visa"]
+    "expected_patterns": ["can't use a bridging visa", "cannot use a bridging visa", "can not use a bridging visa"]
   },
   {
     "question": "How much does a Bridging Visa C cost?",
     "expected_source": "Subclass 030 Bridging visa C (BVC).pdf",
-    "expected_keywords": ["free"]
+    "expected_patterns": ["free"],
+    "must_not_contain": ["\\bbv[abe]\\b", "bridging visa [abe]\\b", "\\b(010|020|050|051)\\b"]
   },
   {
     "question": "If I leave Australia on a Bridging Visa C, can I come back on it?",
     "expected_source": "Subclass 030 Bridging visa C (BVC).pdf",
-    "expected_keywords": ["will not be able to return", "not be able to return"]
+    "expected_patterns": [
+      "(cannot|can't|can not|not be able to|unable to|not allowed to|(does not|doesn't) (let|allow) you( to)?)[^.\\n]{0,40}(return|come back|re-?enter)",
+      "(visa|bvc)[^.\\n]{0,40}(ends|ceases|stops)[^.\\n]{0,40}(leave|depart)",
+      "(leave|depart)[^.\\n]{0,60}(visa|bvc)[^.\\n]{0,30}(ends|ceases|stops)"
+    ]
   },
   {
     "question": "What exactly does visa condition 8101 say?",
     "expected_source": "F2026C00324VOL03.pdf",
-    "expected_keywords": ["must not engage in work"]
+    "expected_patterns": ["must not engage in work"]
   },
   {
     "question": "Can my employer cancel my visa if I breach a visa condition?",
     "expected_source": "visa-holders-and-migrant-workers-workplace-rights-and-entitlements.pdf",
-    "expected_keywords": ["can't cancel your visa", "cannot cancel your visa", "can not cancel your visa"]
+    "expected_patterns": ["can't cancel your visa", "cannot cancel your visa", "can not cancel your visa"]
   },
   {
     "question": "Do I get the same minimum workplace protections as other employees while on a visa?",
     "expected_source": "visa-holders-and-migrant-workers-workplace-rights-and-entitlements.pdf",
-    "expected_keywords": ["same workplace entitlements", "national employment standards"]
+    "expected_patterns": ["same workplace (entitlements|rights)", "national employment standards"]
   },
   {
     "question": "How much does it cost to apply for a review of most migration decisions at the Administrative Review Tribunal?",
     "expected_source": "Immigration and citizenship | Administrative Review Tribunal.pdf",
-    "expected_keywords": ["3,580", "$3,580"]
+    "expected_patterns": ["3,580"]
   },
   {
     "question": "If my protection visa review with the tribunal is unsuccessful, how much do I have to pay?",
     "expected_source": "Immigration and citizenship | Administrative Review Tribunal.pdf",
-    "expected_keywords": ["2,203", "$2,203"]
+    "expected_patterns": ["2,203"]
   },
   {
     "question": "Is there a strict deadline to apply for a review of a visa decision?",
     "expected_source": "Immigration and citizenship | Administrative Review Tribunal.pdf",
-    "expected_keywords": ["strict"]
+    "expected_patterns": ["strict"]
   },
   {
     "question": "Can the tribunal extend the time limit if I miss the deadline to apply for review?",
     "expected_source": "Immigration and citizenship | Administrative Review Tribunal.pdf",
-    "expected_keywords": ["no power to extend"]
+    "expected_patterns": ["no power to extend"]
   },
   {
     "question": "What happens to my bridging visa if the tribunal sets aside the refusal decision and grants my visa?",
     "expected_source": "Information about decisions - MR25 - fact sheet.pdf",
-    "expected_keywords": ["bridging visa will cease"]
+    "expected_patterns": [
+      "(bridging visa|\\bbv[a-e]\\b)[^.\\n]{0,40}(cease|end|stop|expire|no longer)"
+    ]
   },
   {
     "question": "What does it mean if the tribunal affirms the decision under review?",
     "expected_source": "Information about decisions - MR25 - fact sheet.pdf",
-    "expected_keywords": ["should not be changed", "remains in force"]
+    "expected_patterns": [
+      "should not be changed",
+      "decision[^.\\n]{0,40}(stand|remain|stay|is upheld|unchanged|not changed|still applies|continue)",
+      "(agrees with|upholds|confirms|keeps)[^.\\n]{0,30}decision",
+      "(does not|doesn't|won't|will not) change[^.\\n]{0,30}decision"
+    ]
   },
   {
     "question": "If I think the tribunal's decision is wrong in law, what court can I go to?",
     "expected_source": "Information about decisions - MR25 - fact sheet.pdf",
-    "expected_keywords": ["Federal Circuit and Family Court"]
+    "expected_patterns": ["federal circuit and family court"],
+    "must_not_contain": ["administrative appeals tribunal"]
   },
   {
     "question": "What's the difference between a Bridging Visa A and a Bridging Visa B?",
     "expected_source": ["Subclass 010 Bridging visa A (BVA).pdf", "Subclass 020 Bridging visa B (BVB).pdf"],
-    "expected_keywords": ["leave and return"]
+    "expected_patterns": [
+      "(bvb|visa b)\\b[^\\n]{0,120}(leave|travel|depart)[^.\\n]{0,40}(return|come back|re-?enter)"
+    ]
   },
   {
     "question": "What's the weather like in Sydney today?",
     "expected_source": null,
-    "expected_keywords": ["don't have enough information", "do not have enough information", "couldn't find reliable information"]
+    "expected_patterns": ["(don't|do not) have (enough )?information", "couldn't find (reliable )?information"]
   },
   {
     "question": "Can you help me fill out my tax return?",
     "expected_source": null,
-    "expected_keywords": ["don't have enough information", "do not have enough information", "couldn't find reliable information"]
+    "expected_patterns": ["(don't|do not) have (enough )?information", "couldn't find (reliable )?information"]
+  },
+  {
+    "question": "how much does briding visa B cost",
+    "expected_source": "Subclass 020 Bridging visa B (BVB).pdf",
+    "expected_patterns": ["190"],
+    "must_not_contain": ["\\bbv[ace]\\b", "bridging visa [ace]\\b", "\\b(010|030|050|051)\\b"]
+  },
+  {
+    "question": "Should I apply for bridging visa A or B if I need to travel out of the country?",
+    "expected_sources_all": ["Subclass 010 Bridging visa A (BVA).pdf", "Subclass 020 Bridging visa B (BVB).pdf"],
+    "expected_patterns": ["leave and return", "travel outside", "leave australia and return", "return to australia"]
+  },
+  {
+    "question": "how much does visa B cost",
+    "expected_source": "Subclass 020 Bridging visa B (BVB).pdf",
+    "expected_patterns": ["190"],
+    "must_not_contain": ["\\bbv[ace]\\b", "bridging visa [ace]\\b", "\\b(010|030|050|051)\\b"]
+  },
+  {
+    "question": "should i apply for visa A or B to travel out of the country",
+    "expected_sources_all": ["Subclass 010 Bridging visa A (BVA).pdf", "Subclass 020 Bridging visa B (BVB).pdf"],
+    "expected_patterns": ["leave and return", "travel outside", "leave australia and return", "return to australia"]
+  },
+  {
+    "question": "what's a good restaurant for BVB holders in Sydney",
+    "expected_source": null,
+    "expected_patterns": ["(don't|do not) have (enough )?information", "couldn't find (reliable )?information"]
+  },
+  {
+    "question": "Which bank has the best savings account for someone on a Bridging Visa C?",
+    "expected_source": null,
+    "expected_patterns": ["(don't|do not) have (enough )?information", "couldn't find (reliable )?information"]
+  },
+  {
+    "question": "What's the cheapest phone plan for a subclass 050 visa holder?",
+    "expected_source": null,
+    "expected_patterns": ["(don't|do not) have (enough )?information", "couldn't find (reliable )?information"]
   }
 ]
