@@ -16,6 +16,8 @@ Bridging visa & visa pathway navigator | RAG system
 
 Ask plain-English questions about Australian bridging visas — work rights, travel, review options — answered from official Department of Home Affairs documents.
 
+![Immu demo](docs/demo.gif)
+
 ## Setup
 
 ```bash
