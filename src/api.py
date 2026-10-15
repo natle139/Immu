@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from groq import APIError
 from fastapi.responses import FileResponse
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from langchain_core.documents import Document
 from src.retriever import build_retriever, retrieve_documents
 from src.chain import generate_answer
@@ -10,7 +10,8 @@ app = FastAPI(title="Immu API", version="1.0")
 vectorstore = build_retriever()
 
 class Query(BaseModel):
-    query: str
+    # ~170 words: about what the embedding model reads (256 tokens), and keeps pasted essays off the shared Groq quota
+    query: str = Field(min_length=1, max_length=1000)
 
 class Answer(BaseModel):
     answer: str

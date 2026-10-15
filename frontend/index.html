@@ -155,7 +155,7 @@ footer { margin: 48px var(--gutter) 0; padding: 14px 0 22px; border-top: 1px sol
     <div class="kicker">Ask a question</div>
     <form id="ask-form">
       <h2><label for="q">What would you like to know about your bridging visa?</label></h2>
-      <textarea id="q" class="input" required placeholder="e.g. Can I work while on Bridging Visa A?"></textarea>
+      <textarea id="q" class="input" required maxlength="1000" placeholder="e.g. Can I work while on Bridging Visa A?"></textarea>
       <div class="row">
         <button class="btn btn-primary" type="submit">Ask Immu <span aria-hidden="true">→</span></button>
         <span class="muted" style="font-size:13px">Every answer lists the official documents it was drawn from.</span>
@@ -199,7 +199,7 @@ footer { margin: 48px var(--gutter) 0; padding: 14px 0 22px; border-top: 1px sol
   </div>
   <form class="follow" id="follow-form">
     <label for="follow-q" class="kicker" hidden>Ask another question</label>
-    <input id="follow-q" class="input" required placeholder="Ask another question — e.g. Can I study on this visa?">
+    <input id="follow-q" class="input" required maxlength="1000" placeholder="Ask another question — e.g. Can I study on this visa?">
     <button class="btn btn-primary" type="submit">Ask <span aria-hidden="true">→</span></button>
   </form>
 </main>
@@ -210,7 +210,7 @@ footer { margin: 48px var(--gutter) 0; padding: 14px 0 22px; border-top: 1px sol
     <a class="wordmark" href="/" aria-label="Immu home"><i class="logo"></i><span>Immu</span></a>
   </header>
   <div class="state">
-    <textarea id="p-question" class="input" aria-label="Your question"></textarea>
+    <textarea id="p-question" class="input" maxlength="1000" aria-label="Your question"></textarea>
     <div id="loading" role="status">
       <div class="loading-line"></div>
       <p class="muted" style="margin-top:12px">Searching official documents…</p>
@@ -242,8 +242,13 @@ document.querySelectorAll(".logo").forEach(el => el.replaceWith($("logo").conten
 $("today").textContent = "No. 010 · " + new Date().toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
 
 const SUBCLASS = { A: "Bridging visa A (subclass 010)", B: "Bridging visa B (subclass 020)", C: "Bridging visa C (subclass 030)", E: "Bridging visa E (subclass 050/051)" };
-// mirrors detect_visa_subclass() in src/retriever.py
-const subclassOf = q => { const m = q.match(/\bbridging\s+visa\s+([a-e])\b|\bbv([a-e])\b/i); return m && SUBCLASS[(m[1] || m[2]).toUpperCase()]; };
+// rough mirror of detect_visa_subclasses() in src/retriever.py, only used for the label above the question
+const subclassOf = q => {
+  const letters = [...q.matchAll(/\bvisas?\s+([a-e])\b((?:\s*(?:,|\/|&|\bor\b|\band\b)\s*[a-e]\b)*)|\bbv([a-e])\b/gi)]
+    .flatMap(m => [m[1] || m[3], ...((m[2] || "").match(/\b[a-e]\b/gi) || []).filter(c => c !== "a")]);
+  const labels = [...new Set(letters.filter(Boolean).map(c => SUBCLASS[c.toUpperCase()]).filter(Boolean))];
+  return labels.join(" · ");
+};
 
 // "F2026C00324VOL03.pdf p.12" -> friendly title; grouped so one document is one source
 const LEGISLATION = { F2026C00324: "Migration Regulations 1994", C2026C00090: "Migration Act 1958" };
