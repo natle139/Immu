@@ -1,0 +1,933 @@
+{
+ "timestamp": "2026-10-15T12:23:44+00:00",
+ "git": {
+  "commit": "a5c5bcef94dc4fdeffdda5d0545f66f2fb431417",
+  "dirty": true
+ },
+ "config": {
+  "model": "openai/gpt-oss-20b",
+  "temperature": 0,
+  "k": 8,
+  "confidence_threshold": 1.0
+ },
+ "questions": 30,
+ "runs": 2,
+ "summary": {
+  "retrieval": {
+   "mean": 0.9666666666666667,
+   "min": 0.9666666666666667,
+   "max": 0.9666666666666667
+  },
+  "answer": {
+   "mean": 0.8666666666666667,
+   "min": 0.8666666666666667,
+   "max": 0.8666666666666667
+  }
+ },
+ "per_run": [
+  {
+   "retrieval": 0.9666666666666667,
+   "answer": 0.8666666666666667,
+   "results": [
+    {
+     "q": 1,
+     "question": "How much does a Bridging Visa A cost?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.6",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.28",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.34",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42",
+      "Subclass 010 Bridging visa A (BVA).pdf p.6"
+     ],
+     "answer": "A Bridging Visa A (BVA) is free to apply for."
+    },
+    {
+     "q": 2,
+     "question": "Can I leave Australia and come back while I'm on a Bridging Visa A?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Subclass 010 Bridging visa A (BVA).pdf p.14",
+      "Subclass 030 Bridging visa C (BVC).pdf p.7",
+      "Subclass 010 Bridging visa A (BVA).pdf p.19",
+      "Subclass 010 Bridging visa A (BVA).pdf p.18",
+      "Subclass 010 Bridging visa A (BVA).pdf p.1",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.1"
+     ],
+     "answer": "If you have a Bridging Visa A (BVA) and you leave Australia, the visa stops right away.  \nYou will not be able to return on that BVA.  \n\nTo come back you would need another visa that lets you travel, such as a Bridging Visa B (BVB) or a substantive visa that has already been granted. If you don\u2019t have one of those, you would have to apply for and be granted a new visa before you can re\u2011enter."
+    },
+    {
+     "q": 3,
+     "question": "How much does a Bridging Visa B cost?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.15",
+      "Subclass 020 Bridging visa B (BVB).pdf p.1",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "The Bridging Visa B (BVB) costs **AUD\u202f190.00**."
+    },
+    {
+     "q": 4,
+     "question": "What is a Bridging Visa E for?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "24.06.28 Work rights.pdf p.1",
+      "24.06.28 Work rights.pdf p.3",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.2",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.1",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "A Bridging Visa E (BVE) is a temporary visa that lets you stay in Australia legally while you:\n\n- make arrangements to leave the country,\n- finish an immigration matter, or\n- wait for a decision on your visa application.\n\nIt is available to anyone who meets the basic eligibility rules, such as complying with Australian laws and being in Australia when the application is decided."
+    },
+    {
+     "q": 5,
+     "question": "Is there an application fee for a Bridging Visa E?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.28",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.6",
+      "Subclass 020 Bridging visa B (BVB).pdf p.15",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.34",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42"
+     ],
+     "answer": "There is no fee for a Bridging Visa E (subclass\u202f050 or\u202f051) application."
+    },
+    {
+     "q": 6,
+     "question": "What does condition 8101 mean on my bridging visa?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "24.06.28 Work rights.pdf p.1",
+      "24.06.28 Work rights.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Subclass 010 Bridging visa A (BVA).pdf p.16",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "Subclass 010 Bridging visa A (BVA).pdf p.19",
+      "F2026C00324VOL03.pdf p.194"
+     ],
+     "answer": "Condition\u202f8101 on a bridging visa means **\u201cNo work.\u201d**  \n- If your visa grant notice or VEVO shows this condition, you are not allowed to work in Australia.  \n- If you do not see this condition, you can work.  \n\nIf you have condition\u202f8101 and you want to work, you may be able to apply for a new bridging visa that does not include that condition."
+    },
+    {
+     "q": 7,
+     "question": "I have a Bridging Visa C with a no work condition. What do I need to show to get work rights?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "24.06.28 Work rights.pdf p.1",
+      "24.06.28 Work rights.pdf p.3",
+      "24.06.28 Work rights.pdf p.2",
+      "Subclass 030 Bridging visa C (BVC).pdf p.4",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Subclass 030 Bridging visa C (BVC).pdf p.18",
+      "Subclass 030 Bridging visa C (BVC).pdf p.1",
+      "Subclass 030 Bridging visa C (BVC).pdf p.19"
+     ],
+     "answer": "If you have a Bridging Visa C that says \u201cno work\u201d, you can ask for work rights by:\n\n- **Applying for a new Bridging Visa C** that has a work\u2011permission condition.  \n- In that application you must show that you have a **compelling need to work**.  \n- The usual way to prove this is by giving evidence of **financial hardship** \u2013 for example, proof that you cannot meet your living expenses, bills, or other essential costs without earning income.\n\nSo, gather documents that show you are in financial difficulty and submit them with your new Bridging Visa C application."
+    },
+    {
+     "q": 8,
+     "question": "Can I use a bridging visa while I wait for my citizenship application to be decided?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "24.06.28 Work rights.pdf p.3",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.3",
+      "Subclass 030 Bridging visa C (BVC).pdf p.15"
+     ],
+     "answer": "No.  \nThe information says you can\u2019t use a bridging visa while you wait for a citizenship application to be decided."
+    },
+    {
+     "q": 9,
+     "question": "How much does a Bridging Visa C cost?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Subclass 030 Bridging visa C (BVC).pdf p.13",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 030 Bridging visa C (BVC).pdf p.1",
+      "Subclass 030 Bridging visa C (BVC).pdf p.9",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "The Bridging Visa C (Subclass\u202f030) is free to apply for. There is no application fee."
+    },
+    {
+     "q": 10,
+     "question": "If I leave Australia on a Bridging Visa C, can I come back on it?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 030 Bridging visa C (BVC).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.1",
+      "Subclass 030 Bridging visa C (BVC).pdf p.7",
+      "Subclass 030 Bridging visa C (BVC).pdf p.18",
+      "Subclass 030 Bridging visa C (BVC).pdf p.1",
+      "Subclass 030 Bridging visa C (BVC).pdf p.14",
+      "Subclass 030 Bridging visa C (BVC).pdf p.17",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.1"
+     ],
+     "answer": "If you leave Australia while you have a Bridging Visa C (BVC), you **cannot** return on that same visa.  \n- The BVC stops being valid as soon as you depart.  \n- To come back you would need another visa that allows re\u2011entry, or you would have to apply for and be granted a new substantive visa before you can return.  \n\nI don\u2019t have information on any other visa you might hold, so check your other visa status or speak with a migration agent if you need more detail."
+    },
+    {
+     "q": 11,
+     "question": "What exactly does visa condition 8101 say?",
+     "retrieval_ok": true,
+     "answer_ok": false,
+     "sources": [
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.14",
+      "24.06.28 Work rights.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "F2026C00324VOL03.pdf p.194",
+      "Subclass 020 Bridging visa B (BVB).pdf p.2",
+      "24.06.28 Work rights.pdf p.4",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "Visa condition **8101 \u2013 No work** means that the visa holder is not allowed to work in Australia.  \nIf your visa grant notice or VEVO check shows this condition, you must not take any paid or unpaid work while you are in Australia. If the condition is not listed, you are allowed to work."
+    },
+    {
+     "q": 12,
+     "question": "Can my employer cancel my visa if I breach a visa condition?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "visa-holders-and-migrant-workers-workplace-rights-and-entitlements.pdf p.1",
+      "C2026C00090VOL01.pdf p.215",
+      "F2026C00324VOL01.pdf p.182",
+      "F2026C00324VOL01.pdf p.184",
+      "F2026C00324VOL01.pdf p.172",
+      "C2026C00090VOL01.pdf p.252"
+     ],
+     "answer": "Your employer cannot cancel your visa if you breach a visa condition.  \nThe only authority that can grant, refuse or cancel a visa is the Department of Home Affairs (Home\u202fAffairs). Your employer has no power to cancel your visa, even if you break a condition."
+    },
+    {
+     "q": 13,
+     "question": "Do I get the same minimum workplace protections as other employees while on a visa?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "visa-holders-and-migrant-workers-workplace-rights-and-entitlements.pdf p.2",
+      "visa-holders-and-migrant-workers-workplace-rights-and-entitlements.pdf p.1",
+      "24.06.28 Work rights.pdf p.2",
+      "visa-holders-and-migrant-workers-workplace-rights-and-entitlements.pdf p.5"
+     ],
+     "answer": "Yes.  \n- All visa holders and migrant workers in Australia have the same workplace rights and protections as Australian citizens and permanent residents.  \n- This means you are entitled to the same minimum wage, working hours, leave, and other conditions that apply to all employees.  \n- Your employer must follow Australian workplace laws and immigration rules, and they cannot cancel your visa for breaching employment conditions.  \n\nIf you are on a Bridging Visa E and you have applied for judicial review or ministerial intervention, you may not be allowed to work at all, except in very limited circumstances. In that case you would not have the usual work rights until the review is resolved."
+    },
+    {
+     "q": 14,
+     "question": "How much does it cost to apply for a review of most migration decisions at the Administrative Review Tribunal?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.32",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.6",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.28",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.15",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.34",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.17",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.21"
+     ],
+     "answer": "The fee to apply for a review of most migration decisions at the Administrative Review Tribunal is **$3,580**."
+    },
+    {
+     "q": 15,
+     "question": "If my protection visa review with the tribunal is unsuccessful, how much do I have to pay?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.14",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.28",
+      "Information about decisions - MR25 - fact sheet.pdf p.3",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.8",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.15",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.10",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.21"
+     ],
+     "answer": "If your protection\u2011visa review with the Administrative Review Tribunal (ART) is not successful, you will have to pay a fee of **$2,203**.  \nYou must pay this amount within 7 days after the ART sends you an invoice."
+    },
+    {
+     "q": 16,
+     "question": "Is there a strict deadline to apply for a review of a visa decision?",
+     "retrieval_ok": true,
+     "answer_ok": false,
+     "sources": [
+      "Subclass 030 Bridging visa C (BVC).pdf p.8",
+      "Subclass 020 Bridging visa B (BVB).pdf p.7",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.4",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.32",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.19",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.30",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.40",
+      "Subclass 010 Bridging visa A (BVA).pdf p.7"
+     ],
+     "answer": "Yes.  \n- You must apply for a review **within the prescribed timeframe**.  \n- For a judicial review the limit is **35 days from the date of the Tribunal\u2019s decision**.  \n- For an Administrative Appeals Tribunal review you also have a set time limit, but the exact number of days is not given in the documents you shared.  \n\nIf you miss the deadline, it may affect your ability to get the review or to keep a bridging visa."
+    },
+    {
+     "q": 17,
+     "question": "Can the tribunal extend the time limit if I miss the deadline to apply for review?",
+     "retrieval_ok": true,
+     "answer_ok": false,
+     "sources": [
+      "Subclass 030 Bridging visa C (BVC).pdf p.8",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.5",
+      "Subclass 020 Bridging visa B (BVB).pdf p.7",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.14",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.19",
+      "Subclass 010 Bridging visa A (BVA).pdf p.7",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.21"
+     ],
+     "answer": "I don\u2019t have enough information in my documents to answer that reliably. Please check the Department of Home Affairs decision letter or speak with a registered migration agent."
+    },
+    {
+     "q": 18,
+     "question": "What happens to my bridging visa if the tribunal sets aside the refusal decision and grants my visa?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 020 Bridging visa B (BVB).pdf p.7",
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "Subclass 010 Bridging visa A (BVA).pdf p.7"
+     ],
+     "answer": "If the tribunal sets aside the refusal and gives you a new decision that your visa is granted, your bridging visa will stop. The bridging visa ends as soon as the new visa is issued."
+    },
+    {
+     "q": 19,
+     "question": "What does it mean if the tribunal affirms the decision under review?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 030 Bridging visa C (BVC).pdf p.8",
+      "Subclass 020 Bridging visa B (BVB).pdf p.7",
+      "C2026C00090VOL02.pdf p.169",
+      "C2026C00090VOL02.pdf p.151",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.19",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.40"
+     ],
+     "answer": "If the tribunal **affirms** the decision under review, it means the tribunal has decided that the original decision made by the delegate (or the Department) should stay the same.  \n- The original decision is not changed.  \n- The delegate\u2019s decision remains in force and you must follow it.  \n- You do not get a new decision from the tribunal; the status of your visa or application stays as it was before the review."
+    },
+    {
+     "q": 20,
+     "question": "If I think the tribunal's decision is wrong in law, what court can I go to?",
+     "retrieval_ok": false,
+     "answer_ok": false,
+     "sources": [
+      "Subclass 020 Bridging visa B (BVB).pdf p.7",
+      "C2026C00090VOL02.pdf p.167",
+      "C2026C00090VOL02.pdf p.315",
+      "C2026C00090VOL02.pdf p.206",
+      "C2026C00090VOL02.pdf p.205",
+      "C2026C00090VOL02.pdf p.322"
+     ],
+     "answer": "If you believe the tribunal\u2019s decision is wrong in law, you can take it to the **Federal Court**.  \nThe Federal Court can review the decision in two ways:\n\n- **Original jurisdiction** \u2013 you can ask the court to look at the decision itself (this is usually for serious legal errors).  \n- **Appellate jurisdiction** \u2013 you can ask the court to review the decision that was made by the Administrative Appeals Tribunal (ART).\n\nIf the matter is very serious or involves a question of national importance, you could also go to the **High Court**.  \nThe High Court can only take the case if it is asked to exercise its original jurisdiction over the tribunal decision.\n\nSo, for most tribunal decisions the correct court to approach is the **Federal Court**. The High Court is an option only in special circumstances."
+    },
+    {
+     "q": 21,
+     "question": "What's the difference between a Bridging Visa A and a Bridging Visa B?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Subclass 010 Bridging visa A (BVA).pdf p.2",
+      "Subclass 010 Bridging visa A (BVA).pdf p.3",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "- **Bridging Visa A (BVA)**  \n  * It is a temporary visa that is usually granted automatically when you apply for a protection visa.  \n  * It keeps you lawful in Australia while your protection visa application is being processed.  \n  * If you have a substantive visa when the BVA is granted, you must keep complying with that visa\u2019s conditions.  \n  * The BVA ends when your substantive visa ends or when a more beneficial bridging visa is granted.\n\n- **Bridging Visa B (BVB)**  \n  * It is also a temporary visa but it is used when you are applying for a substantive visa that is not a protection visa.  \n  * With a BVB you can leave Australia and return during a specified travel period while your substantive visa is being processed.  \n  * It keeps you lawful in Australia until the substantive visa decision is final or until a decision is set aside and a new visa is granted.  \n\nSo, the main differences are the type of visa you are applying for (protection vs. other substantive visas) and the travel flexibility that BVB gives you."
+    },
+    {
+     "q": 22,
+     "question": "What's the weather like in Sydney today?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [],
+     "answer": "I couldn't find reliable information about that in my documents. Please check homeaffairs.gov.au or contact a registered migration agent."
+    },
+    {
+     "q": 23,
+     "question": "Can you help me fill out my tax return?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [],
+     "answer": "I couldn't find reliable information about that in my documents. Please check homeaffairs.gov.au or contact a registered migration agent."
+    },
+    {
+     "q": 24,
+     "question": "how much does briding visa B cost",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.15",
+      "Subclass 020 Bridging visa B (BVB).pdf p.1",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.6",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "The Bridging visa B (Subclass\u202f020) costs **AUD\u202f190.00**."
+    },
+    {
+     "q": 25,
+     "question": "Should I apply for bridging visa A or B if I need to travel out of the country?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 020 Bridging visa B (BVB).pdf p.9",
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.16",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.15",
+      "Subclass 010 Bridging visa A (BVA).pdf p.12"
+     ],
+     "answer": "If you plan to leave Australia and come back, you should apply for a **Bridging visa B (BVB)**.  \nThe BVB lets you travel outside Australia and return until a set date, as long as it is granted before you leave.  \n\nA Bridging visa A (BVA) does not give you that travel permission. It is mainly for staying in Australia while your substantive visa or review is processed.  \n\nSo, for travel, choose the BVB."
+    },
+    {
+     "q": 26,
+     "question": "how much does visa B cost",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.15",
+      "Subclass 020 Bridging visa B (BVB).pdf p.1",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.6",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "The Subclass\u202f020 Bridging visa\u202fB (BVB) costs **AUD\u202f190.00**."
+    },
+    {
+     "q": 27,
+     "question": "should i apply for visa A or B to travel out of the country",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 020 Bridging visa B (BVB).pdf p.9",
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.16",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.15",
+      "Subclass 010 Bridging visa A (BVA).pdf p.12"
+     ],
+     "answer": "If you want to leave Australia and come back later, you should apply for a **Bridging Visa B (BVB)**.  \nA BVB lets you travel outside Australia and return before a set expiry date.  \n\nA Bridging Visa A (BVA) does not give you that travel permission. It is mainly for staying in Australia while your main visa is being processed.  \n\nSo, for travel out of the country, apply for a BVB."
+    },
+    {
+     "q": 28,
+     "question": "what's a good restaurant for BVB holders in Sydney",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [],
+     "answer": "I couldn't find reliable information about that in my documents. Please check homeaffairs.gov.au or contact a registered migration agent."
+    },
+    {
+     "q": 29,
+     "question": "Which bank has the best savings account for someone on a Bridging Visa C?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [],
+     "answer": "I couldn't find reliable information about that in my documents. Please check homeaffairs.gov.au or contact a registered migration agent."
+    },
+    {
+     "q": 30,
+     "question": "What's the cheapest phone plan for a subclass 050 visa holder?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [],
+     "answer": "I couldn't find reliable information about that in my documents. Please check homeaffairs.gov.au or contact a registered migration agent."
+    }
+   ]
+  },
+  {
+   "retrieval": 0.9666666666666667,
+   "answer": 0.8666666666666667,
+   "results": [
+    {
+     "q": 1,
+     "question": "How much does a Bridging Visa A cost?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.6",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.28",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.34",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42",
+      "Subclass 010 Bridging visa A (BVA).pdf p.6"
+     ],
+     "answer": "A Bridging Visa A (Subclass\u202f010) is free to apply for."
+    },
+    {
+     "q": 2,
+     "question": "Can I leave Australia and come back while I'm on a Bridging Visa A?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Subclass 010 Bridging visa A (BVA).pdf p.14",
+      "Subclass 030 Bridging visa C (BVC).pdf p.7",
+      "Subclass 010 Bridging visa A (BVA).pdf p.19",
+      "Subclass 010 Bridging visa A (BVA).pdf p.18",
+      "Subclass 010 Bridging visa A (BVA).pdf p.1",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.1"
+     ],
+     "answer": "If you have a Bridging Visa A (BVA) and you leave Australia, the visa stops right away.  \nYou will not be able to return on that BVA.  \n\nTo come back you would need another visa that lets you travel, such as a Bridging Visa B (BVB) or a substantive visa that has already been granted. If you don\u2019t have one of those, you would have to apply for and be granted a new visa before you can re\u2011enter."
+    },
+    {
+     "q": 3,
+     "question": "How much does a Bridging Visa B cost?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.15",
+      "Subclass 020 Bridging visa B (BVB).pdf p.1",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "The Bridging Visa B (BVB) costs **AUD\u202f190.00**."
+    },
+    {
+     "q": 4,
+     "question": "What is a Bridging Visa E for?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "24.06.28 Work rights.pdf p.1",
+      "24.06.28 Work rights.pdf p.3",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.2",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.1",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "A Bridging Visa E (BVE) is a temporary visa that lets you stay in Australia legally while you:\n\n- make arrangements to leave the country,\n- finish an immigration matter, or\n- wait for a decision on your visa application.\n\nIt is available to anyone who meets the basic eligibility rules, such as complying with Australian laws and being in Australia when the application is decided."
+    },
+    {
+     "q": 5,
+     "question": "Is there an application fee for a Bridging Visa E?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.28",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.6",
+      "Subclass 020 Bridging visa B (BVB).pdf p.15",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.34",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42"
+     ],
+     "answer": "There is no fee for a Bridging Visa E (subclass\u202f050 or\u202f051) application."
+    },
+    {
+     "q": 6,
+     "question": "What does condition 8101 mean on my bridging visa?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "24.06.28 Work rights.pdf p.1",
+      "24.06.28 Work rights.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Subclass 010 Bridging visa A (BVA).pdf p.16",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "Subclass 010 Bridging visa A (BVA).pdf p.19",
+      "F2026C00324VOL03.pdf p.194"
+     ],
+     "answer": "Condition\u202f8101 on a bridging visa means **\u201cNo work.\u201d**  \n- If your visa grant notice or VEVO shows this condition, you are not allowed to work in Australia.  \n- If you do not see this condition, you can work.  \n\nIf you have condition\u202f8101 and want to work, you may apply for a new bridging visa that does not include that condition."
+    },
+    {
+     "q": 7,
+     "question": "I have a Bridging Visa C with a no work condition. What do I need to show to get work rights?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "24.06.28 Work rights.pdf p.1",
+      "24.06.28 Work rights.pdf p.3",
+      "24.06.28 Work rights.pdf p.2",
+      "Subclass 030 Bridging visa C (BVC).pdf p.4",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Subclass 030 Bridging visa C (BVC).pdf p.18",
+      "Subclass 030 Bridging visa C (BVC).pdf p.1",
+      "Subclass 030 Bridging visa C (BVC).pdf p.19"
+     ],
+     "answer": "If you have a Bridging Visa C that says \u201cno work\u201d, you can ask for work rights by:\n\n- **Applying for a new Bridging Visa C** that has a work\u2011permission condition.  \n- In that application you must show that you have a **compelling need to work**.  \n- The usual evidence is proof of **financial hardship** \u2013 for example, recent bank statements, a letter from a lender, or other documents that show you cannot meet your living expenses without work.\n\nOnce you submit the application with that evidence, the Department will review it and, if you meet the requirement, will issue a new Bridging Visa C that lets you work."
+    },
+    {
+     "q": 8,
+     "question": "Can I use a bridging visa while I wait for my citizenship application to be decided?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "24.06.28 Work rights.pdf p.3",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.3",
+      "Subclass 030 Bridging visa C (BVC).pdf p.15"
+     ],
+     "answer": "No.  \nThe information says you can\u2019t use a bridging visa while you wait for a citizenship application to be decided."
+    },
+    {
+     "q": 9,
+     "question": "How much does a Bridging Visa C cost?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Subclass 030 Bridging visa C (BVC).pdf p.13",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 030 Bridging visa C (BVC).pdf p.1",
+      "Subclass 030 Bridging visa C (BVC).pdf p.9",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "The Bridging Visa C (Subclass\u202f030) is free to apply for. There is no application fee."
+    },
+    {
+     "q": 10,
+     "question": "If I leave Australia on a Bridging Visa C, can I come back on it?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 030 Bridging visa C (BVC).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.1",
+      "Subclass 030 Bridging visa C (BVC).pdf p.7",
+      "Subclass 030 Bridging visa C (BVC).pdf p.18",
+      "Subclass 030 Bridging visa C (BVC).pdf p.1",
+      "Subclass 030 Bridging visa C (BVC).pdf p.14",
+      "Subclass 030 Bridging visa C (BVC).pdf p.17",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.1"
+     ],
+     "answer": "If you leave Australia while you hold a Bridging Visa C (BVC), you **cannot** return on that same visa.  \n- The BVC stops being valid as soon as you depart.  \n- To come back you would need another visa that allows re\u2011entry, or you would have to apply for and be granted a new substantive visa before you can return.  \n\nI don\u2019t have information on any other visa you might hold, so check your other visa status or speak with a migration agent if you need more detail."
+    },
+    {
+     "q": 11,
+     "question": "What exactly does visa condition 8101 say?",
+     "retrieval_ok": true,
+     "answer_ok": false,
+     "sources": [
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.14",
+      "24.06.28 Work rights.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "F2026C00324VOL03.pdf p.194",
+      "Subclass 020 Bridging visa B (BVB).pdf p.2",
+      "24.06.28 Work rights.pdf p.4",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "Visa condition **8101 \u2013 No work** means that the visa holder is not allowed to work in Australia.  \nIf your visa grant notice or VEVO check shows this condition, you must not take any paid or unpaid work while you are in Australia. If the condition is not listed, you are allowed to work."
+    },
+    {
+     "q": 12,
+     "question": "Can my employer cancel my visa if I breach a visa condition?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "visa-holders-and-migrant-workers-workplace-rights-and-entitlements.pdf p.1",
+      "C2026C00090VOL01.pdf p.215",
+      "F2026C00324VOL01.pdf p.182",
+      "F2026C00324VOL01.pdf p.184",
+      "F2026C00324VOL01.pdf p.172",
+      "C2026C00090VOL01.pdf p.252"
+     ],
+     "answer": "Your employer cannot cancel your visa if you breach a visa condition.  \nThe only authority that can grant, refuse or cancel a visa is the Department of Home Affairs (Home\u202fAffairs). Your employer has no power to cancel your visa, even if you break a condition."
+    },
+    {
+     "q": 13,
+     "question": "Do I get the same minimum workplace protections as other employees while on a visa?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "visa-holders-and-migrant-workers-workplace-rights-and-entitlements.pdf p.2",
+      "visa-holders-and-migrant-workers-workplace-rights-and-entitlements.pdf p.1",
+      "24.06.28 Work rights.pdf p.2",
+      "visa-holders-and-migrant-workers-workplace-rights-and-entitlements.pdf p.5"
+     ],
+     "answer": "Yes.  \n- All visa holders and migrant workers in Australia have the same workplace rights and protections as Australian citizens and permanent residents.  \n- This means you are entitled to the same minimum wage, working hours, leave, and other conditions that apply to all employees.  \n- Your employer must follow Australian workplace laws and immigration rules, and they cannot cancel your visa for breaching employment conditions.  \n\nIf you are on a Bridging Visa E and you have applied for judicial review or ministerial intervention, you may not be allowed to work at all, except in very limited circumstances. In that case you would not have the usual work rights until the review is resolved."
+    },
+    {
+     "q": 14,
+     "question": "How much does it cost to apply for a review of most migration decisions at the Administrative Review Tribunal?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.32",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.6",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.28",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.15",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.34",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.17",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.21"
+     ],
+     "answer": "The fee to apply for a review of most migration decisions at the Administrative Review Tribunal is **$3,580**."
+    },
+    {
+     "q": 15,
+     "question": "If my protection visa review with the tribunal is unsuccessful, how much do I have to pay?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.14",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.28",
+      "Information about decisions - MR25 - fact sheet.pdf p.3",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.8",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.15",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.42",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.10",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.21"
+     ],
+     "answer": "If the tribunal decides against you, you will normally have to pay a fee of **$2,203**.  \nYou must pay that amount within 7 days after you receive an invoice from the tribunal.  \n\nIf the Department of Home Affairs had already referred your decision to the tribunal for review, you do **not** have to pay a fee, no matter what the outcome is."
+    },
+    {
+     "q": 16,
+     "question": "Is there a strict deadline to apply for a review of a visa decision?",
+     "retrieval_ok": true,
+     "answer_ok": false,
+     "sources": [
+      "Subclass 030 Bridging visa C (BVC).pdf p.8",
+      "Subclass 020 Bridging visa B (BVB).pdf p.7",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.4",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.32",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.19",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.30",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.40",
+      "Subclass 010 Bridging visa A (BVA).pdf p.7"
+     ],
+     "answer": "Yes.  \n- You must apply for a review **within the prescribed timeframe**.  \n- For a judicial review the limit is **35 days from the date of the Tribunal\u2019s decision**.  \n- For an Administrative Appeals Tribunal review you also have a set time limit, but the exact number of days is not given in the documents you shared.  \n\nIf you miss the deadline, it may affect your ability to get the review or to keep a bridging visa."
+    },
+    {
+     "q": 17,
+     "question": "Can the tribunal extend the time limit if I miss the deadline to apply for review?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 030 Bridging visa C (BVC).pdf p.8",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.5",
+      "Subclass 020 Bridging visa B (BVB).pdf p.7",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.14",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.19",
+      "Subclass 010 Bridging visa A (BVA).pdf p.7",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.21"
+     ],
+     "answer": "The Tribunal can only extend the time limit for a **non\u2011expedited** review.  \nIf you miss the deadline for an expedited review, the Tribunal has no power to extend it.  \n\n- **Non\u2011expedited review** \u2013 you can ask the Tribunal to extend the time limit.  \n- **Expedited review** \u2013 the Tribunal cannot extend the deadline.  \n\nIf you\u2019re unsure which type of review you need, check the decision letter from the Department of Home Affairs. If you need more help, you may want to look at the letter or speak with a migration agent."
+    },
+    {
+     "q": 18,
+     "question": "What happens to my bridging visa if the tribunal sets aside the refusal decision and grants my visa?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 020 Bridging visa B (BVB).pdf p.7",
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.2",
+      "Subclass 010 Bridging visa A (BVA).pdf p.7"
+     ],
+     "answer": "If the tribunal sets aside the refusal and gives you a new decision that your visa is granted, your bridging visa will stop. The bridging visa ends as soon as the new visa is issued."
+    },
+    {
+     "q": 19,
+     "question": "What does it mean if the tribunal affirms the decision under review?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 030 Bridging visa C (BVC).pdf p.8",
+      "Subclass 020 Bridging visa B (BVB).pdf p.7",
+      "C2026C00090VOL02.pdf p.169",
+      "C2026C00090VOL02.pdf p.151",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.19",
+      "Immigration and citizenship | Administrative Review Tribunal.pdf p.40"
+     ],
+     "answer": "If the tribunal affirms the decision under review, it means the tribunal has decided that the original decision made by the delegate (or the Department) should not be changed.  \n- The original decision stays in force.  \n- You do not get a new decision from the tribunal.  \n- The outcome is the same as the decision that was originally made."
+    },
+    {
+     "q": 20,
+     "question": "If I think the tribunal's decision is wrong in law, what court can I go to?",
+     "retrieval_ok": false,
+     "answer_ok": false,
+     "sources": [
+      "Subclass 020 Bridging visa B (BVB).pdf p.7",
+      "C2026C00090VOL02.pdf p.167",
+      "C2026C00090VOL02.pdf p.315",
+      "C2026C00090VOL02.pdf p.206",
+      "C2026C00090VOL02.pdf p.205",
+      "C2026C00090VOL02.pdf p.322"
+     ],
+     "answer": "If you believe the tribunal\u2019s decision is wrong in law, you can take it to the **Federal Court**.  \nThe Federal Court can review the decision in two ways:\n\n- **Original jurisdiction** \u2013 you can ask the court to look at the decision itself (this is usually for serious legal errors).  \n- **Appellate jurisdiction** \u2013 you can ask the court to review the decision that was made by the Administrative Appeals Tribunal (ART).\n\nIf the matter is very serious or involves a question of national importance, you could also go to the **High Court**.  \nThe High Court can only take the case if it is asked to exercise its original jurisdiction over the tribunal decision.\n\nSo, for most tribunal decisions the correct court to approach is the **Federal Court**. The High Court is an option only in special circumstances."
+    },
+    {
+     "q": 21,
+     "question": "What's the difference between a Bridging Visa A and a Bridging Visa B?",
+     "retrieval_ok": true,
+     "answer_ok": false,
+     "sources": [
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.1",
+      "Information about decisions - MR25 - fact sheet.pdf p.1",
+      "Subclass 010 Bridging visa A (BVA).pdf p.2",
+      "Subclass 010 Bridging visa A (BVA).pdf p.3",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "- **Bridging Visa A (BVA)**  \n  * It is a temporary visa that is usually granted automatically when you apply for a protection visa.  \n  * It keeps you lawful in Australia while your protection visa application is being processed.  \n  * If you have a substantive visa when the BVA is granted, you must keep complying with that visa\u2019s conditions.  \n  * The BVA ends when your substantive visa ends or when a more beneficial bridging visa is granted.\n\n- **Bridging Visa B (BVB)**  \n  * It is also a temporary visa but it is used when you are applying for a substantive visa that is not a protection visa.  \n  * It lets you stay lawfully in Australia until the substantive visa decision is made.  \n  * It allows you to leave and re\u2011enter Australia during a specified travel period while the substantive visa is being processed.  \n  * If a review tribunal upholds a refusal and you apply for judicial review, you must apply for a bridging visa by webform; the BVB can be used in that situation as well.\n\nSo, the main differences are the type of substantive visa you are waiting for (protection visa for BVA, other visas for BVB) and the travel flexibility that BVB gives you."
+    },
+    {
+     "q": 22,
+     "question": "What's the weather like in Sydney today?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [],
+     "answer": "I couldn't find reliable information about that in my documents. Please check homeaffairs.gov.au or contact a registered migration agent."
+    },
+    {
+     "q": 23,
+     "question": "Can you help me fill out my tax return?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [],
+     "answer": "I couldn't find reliable information about that in my documents. Please check homeaffairs.gov.au or contact a registered migration agent."
+    },
+    {
+     "q": 24,
+     "question": "how much does briding visa B cost",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.15",
+      "Subclass 020 Bridging visa B (BVB).pdf p.1",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.6",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "The Bridging visa B (Subclass\u202f020) costs **AUD\u202f190.00**."
+    },
+    {
+     "q": 25,
+     "question": "Should I apply for bridging visa A or B if I need to travel out of the country?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 020 Bridging visa B (BVB).pdf p.9",
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.16",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.15",
+      "Subclass 010 Bridging visa A (BVA).pdf p.12"
+     ],
+     "answer": "If you plan to leave Australia and come back, you should apply for a **Bridging visa B (BVB)**.  \nThe BVB lets you travel outside Australia and return until a set date, as long as it is granted before you leave.  \n\nA Bridging visa A (BVA) does not give you that travel permission. It is mainly for staying in Australia while your substantive visa or review is processed.  \n\nSo, for travel, choose the BVB."
+    },
+    {
+     "q": 26,
+     "question": "how much does visa B cost",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.2",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.15",
+      "Subclass 020 Bridging visa B (BVB).pdf p.1",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.6",
+      "Subclass 030 Bridging visa C (BVC).pdf p.2"
+     ],
+     "answer": "The Subclass\u202f020 Bridging visa\u202fB (BVB) costs **AUD\u202f190.00**."
+    },
+    {
+     "q": 27,
+     "question": "should i apply for visa A or B to travel out of the country",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [
+      "Subclass 020 Bridging visa B (BVB).pdf p.9",
+      "Subclass 010 Bridging visa A (BVA).pdf p.4",
+      "Subclass 020 Bridging visa B (BVB).pdf p.16",
+      "Subclass 030 Bridging visa C (BVC).pdf p.3",
+      "Subclass 020 Bridging visa B (BVB).pdf p.4",
+      "Bridging visa E (BVE) - Subclass 050 and 051.pdf p.3",
+      "Subclass 010 Bridging visa A (BVA).pdf p.15",
+      "Subclass 010 Bridging visa A (BVA).pdf p.12"
+     ],
+     "answer": "If you want to leave Australia and come back later, you should apply for a **Bridging Visa B (BVB)**.  \nA BVB lets you travel outside Australia and return before a set expiry date.  \n\nA Bridging Visa A (BVA) does not give you that travel permission. It is mainly for staying in Australia while your main visa is being processed.  \n\nSo, for travel out of the country, apply for a BVB."
+    },
+    {
+     "q": 28,
+     "question": "what's a good restaurant for BVB holders in Sydney",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [],
+     "answer": "I couldn't find reliable information about that in my documents. Please check homeaffairs.gov.au or contact a registered migration agent."
+    },
+    {
+     "q": 29,
+     "question": "Which bank has the best savings account for someone on a Bridging Visa C?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [],
+     "answer": "I couldn't find reliable information about that in my documents. Please check homeaffairs.gov.au or contact a registered migration agent."
+    },
+    {
+     "q": 30,
+     "question": "What's the cheapest phone plan for a subclass 050 visa holder?",
+     "retrieval_ok": true,
+     "answer_ok": true,
+     "sources": [],
+     "answer": "I couldn't find reliable information about that in my documents. Please check homeaffairs.gov.au or contact a registered migration agent."
+    }
+   ]
+  }
+ ]
+}
